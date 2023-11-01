@@ -5,7 +5,10 @@
 
 ### Project Overview
 
-This data analysis project aims to provide insights into the current HR data of a company. By creating a data visualisation dashboard that contains various aspects of the HR data, we seek to identify trends and gain a deeper understanding of the company's employees in one easliy accessable dashboard. 
+This data analysis project aims to provide insights into the current HR data of a company. By creating a data visualisation dashboard that contains various aspects of the HR data, we seek to identify trends and gain a deeper understanding of the company's employees in one easily accessible dashboard. 
+
+![Screenshot 2023-10-30 at 21 00 30](https://github.com/pradippun/portfolio/assets/149323535/11d29033-1623-4aaf-89f9-a9b51a9d6acc)
+
 
 ### Data Sources
 
