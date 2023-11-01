@@ -1,5 +1,7 @@
 # Data Analytic Portfolio 
 
+## Table of Contents
+- [Porject 1- HR Data Analytics and Visualisation] (#HR-Data-Analytics-and-Visualisation)  
 
 ## HR Data Analytics and Visualisation
 
