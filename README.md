@@ -13,12 +13,12 @@ This data analysis project aims to provide insights into the current HR data of 
 
 ### Data Sources
 
-HR Data: The primary dataset used for this analysis is the "HR Data.xlsx" file, containing detailed information about each employee who has worked for the company.  
+HR Data: The primary dataset used for this analysis is the [HR Data.xlsx](https://github.com/pradippun/portfolio/blob/main/HR%20Data.xlsx) file, containing detailed information about each employee who has worked for the company.  
 
 ### Tools
-- **Excel** - Data Cleaning/ Preparing CSV file for SQL table
+- **Excel** - Data Cleaning/ Preparing CSV file for SQL table [hrdata.csv](https://github.com/pradippun/portfolio/blob/main/hrdata.csv)
 - **Tableau** - Data Visualisation - [HR Analytics Dashboard](https://public.tableau.com/app/profile/pradip.pun/viz/HRAnalyticsDashboard_16986995899550/HRANALYTICSDASHBOARD) 
-- **PostgreSQL** - Running test for the Tableau report using SQL [SQL Queries](https://github.com/pradippun/portfolio/blob/main/HR_Data_Test_SQL.sql)
+- **PostgreSQL** - Running test for the Tableau report using [SQL Queries](https://github.com/pradippun/portfolio/blob/main/HR_Data_Test_SQL.sql)
 
 ### Data Cleaning/ Preparation
 In the initial data preparation phase, I performed the following tasks:
@@ -35,3 +35,4 @@ Following are some of the Tableau features I have used to create the dashboard.
 4. Pie Chart and Dual Axis to create a Donut Chart.
 
 ### Testing the Tableau report
+
