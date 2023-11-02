@@ -30,11 +30,62 @@ In the initial data preparation phase, I performed the following tasks:
 
 ### Data Visualisation
 For the data visualisation, I have used Tableau to create an interactive dashboard that contains information such as KPIs, department attrition share, and job satisfaction ratings by job roles.
-Following are some of the Tableau features I have used to create the dashboard. 
+Following are some of the Tableau features I have used to create the [HR Analytics Dashboard](https://public.tableau.com/app/profile/pradip.pun/viz/HRAnalyticsDashboard_16986995899550/HRANALYTICSDASHBOARD): 
 1. Calculated Fields to calculate the attrition count and attrition rate %.
 2. Heat Map Chart to show the job satisfaction rating.
 3. Bin Size in bar chart to group the age.
 4. Pie Chart and Dual Axis to create a Donut Chart.
 
 ### Testing the Tableau report
+Quality assurance tests have been run using PostgreSQL queries to check the accuracy and quality of the data presented in the 'HR Analytics Dashboard'. 
+This step of the project also allowed me to test each feature and filter on the report worked as per the requirement. 
+Following are some examples of the [SQL Queries](https://github.com/pradippun/portfolio/blob/main/HR_Data_Test_SQL.sql):
+1. Creating a table in DB
+```sql
+CREATE TABLE hrdata
+(	
+	emp_no int8 PRIMARY KEY,
+	gender varchar(50) NOT NULL,
+	age_band varchar(50),
+	age int8,
+	department varchar(50),
+	education varchar(50),
+	education_field varchar(50),
+	job_role varchar(50),
+	employee_count int8,
+	attrition varchar(50),
+	attrition_label varchar(50),
+	job_satisfaction int8,
+	active_employee int8
+);
+```
+2. Count of attrition for employees with 'High School' education and in 'Sales' department
+```sql
+SELECT count(attrition) as attrition_hs_sales
+	FROM hrdata
+	WHERE attrition = 'Yes' and education = 'High School' and department = 'Sales'
+```
+3. Calculate attrition rate % for the 'Sales' department
+```sql
+ SELECT ROUND(((SELECT count(attrition) from hrdata where attrition = 'Yes'and department = 'Sales')/
+ sum(employee_count)) * 100, 2) AS attrition_rate
+ 	FROM hrdata
+	WHERE department = 'Sales'
+```
+4. Job Satisfaction Rating table by Job Role
+```sql
+SELECT *
+FROM crosstab(
+	'SELECT job_role, job_satisfaction, sum(employee_count)
+	FROM hrdata
+	GROUP BY job_role, job_satisfaction
+	ORDER BY job_role, job_satisfaction'
+	) AS ct(job_role varchar(50), one numeric, two numeric, three numeric, four numeric)
+ORDER BY job_role;
+```
 
+### Results/ Findings
+The result of this project is an interactive HR dashboard that allows the HR team and other stakeholders to easily access some crucial information about the employees of the company. 
+Here are some examples of findings: 
+1. There have been a total of 1,470 staff employed by the company, of which 237 have left the company (16.12% attrition rate).
+2. The R&D department has the highest share of attrition rate. This may be due to the high number of low job satisfaction ratings in Laboratory Technician and Research Scientist roles. 
