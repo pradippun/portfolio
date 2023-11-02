@@ -85,7 +85,12 @@ ORDER BY job_role;
 ```
 
 ### Results/ Findings
-The result of this project is an interactive HR dashboard that allows the HR team and other stakeholders to easily access some crucial information about the employees of the company. 
+The result of this project is an interactive HR dashboard that allows the HR team and other stakeholders to easily access some crucial information focused on employee attrition in the company. 
 Here are some examples of findings: 
-1. There have been a total of 1,470 staff employed by the company, of which 237 have left the company (16.12% attrition rate).
-2. The R&D department has the highest share of attrition rate. This may be due to the high number of low job satisfaction ratings in Laboratory Technician and Research Scientist roles. 
+1. There have been a total of **1,470** staff employed by the company, of which **237** have left the company (**16.12%** attrition rate).
+2. Employees with a high school education have the highest attrition rate of 18.24%. 
+3. The R&D department has the highest share (56.12%) of attrition rate. This may be due to the high number of low job satisfaction ratings in Laboratory Technician and Research Scientist roles.
+4. The highest attrition rate is in the age group 25-34. 
+
+### Recommendations
+Based on the analysis, I recommend the company do further thorough research on why the identified employee segments have the highest attrition rate. Some reasons to research could be a lack of career progression, more flexible work-life balance, salary and work culture. This will help the company retain it's employees and save effort and expenses on highring/ training new employees.  
