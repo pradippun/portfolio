@@ -18,7 +18,7 @@ This data analysis project aims to provide insights into the current HR data of 
 HR Data: The primary dataset used for this analysis is the [HR Data.xlsx](https://github.com/pradippun/portfolio/blob/main/HR%20Data.xlsx) file, containing detailed information about each employee who has worked for the company.  
 
 ### Tools
-- **Excel** - Data Cleaning/ Preparing CSV file for SQL table [hrdata.csv](https://github.com/pradippun/portfolio/blob/main/hrdata.csv)
+- **Excel** - Data Cleaning/ Preparing CSV file for SQL table [hrdata.csv](https://github.com/pradippun/portfolio/blob/main/hrdata.csv). Running test with Pivot Table
 - **Tableau** - Data Visualisation - [HR Analytics Dashboard](https://public.tableau.com/app/profile/pradip.pun/viz/HRAnalyticsDashboard_16986995899550/HRANALYTICSDASHBOARD) 
 - **PostgreSQL** - Running test for the Tableau report using [SQL Queries](https://github.com/pradippun/portfolio/blob/main/HR_Data_Test_SQL.sql)
 
@@ -36,7 +36,7 @@ Following are some of the Tableau features I have used to create the [HR Analyti
 3. Bin Size in bar chart to group the age.
 4. Pie Chart and Dual Axis to create a Donut Chart.
 
-### Testing the Tableau report
+### Testing the Tableau report using **SQL**
 Quality assurance tests have been run using PostgreSQL queries to check the accuracy and quality of the data presented in the 'HR Analytics Dashboard'. 
 This step of the project also allowed me to test each feature and filter on the report worked as per the requirement. 
 Following are some examples of the [SQL Queries](https://github.com/pradippun/portfolio/blob/main/HR_Data_Test_SQL.sql):
@@ -83,6 +83,12 @@ FROM crosstab(
 	) AS ct(job_role varchar(50), one numeric, two numeric, three numeric, four numeric)
 ORDER BY job_role;
 ```
+
+### Testing the Tableau report using **SQL**
+Quality assurance tests have been run again but this time using Excel Pivot Tables. 
+Following are some pivot tables created to test the results. 
+
+
 
 ### Results/ Findings
 The result of this project is an interactive HR dashboard that allows the HR team and other stakeholders to easily access some crucial information focused on employee attrition in the company. 
