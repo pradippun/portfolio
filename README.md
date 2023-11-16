@@ -84,11 +84,11 @@ FROM crosstab(
 ORDER BY job_role;
 ```
 
-### Testing the Tableau report using **SQL**
+### Testing the Tableau report using **Excel**
 Quality assurance tests have been run again but this time using Excel Pivot Tables. 
-Following are some pivot tables created to test the results. 
+Following are some pivot tables and graphs created to test the results. 
 
-
+<img width="839" alt="Screenshot 2023-11-16 at 15 28 33" src="https://github.com/pradippun/portfolio/assets/149323535/a037e88b-2a62-438b-96c5-9ee93d5153b0">
 
 ### Results/ Findings
 The result of this project is an interactive HR dashboard that allows the HR team and other stakeholders to easily access some crucial information focused on employee attrition in the company. 
